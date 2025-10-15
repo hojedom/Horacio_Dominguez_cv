@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Currículum — Horacio Domínguez</title>
+  <style>
+    body {
+      margin: 0;
+      background: #e8ebef;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #2f3542;
+    }
+    header {
+      background: #00204d;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+    header h2 {
+      margin: 0;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+    .btn-back {
+      background: #fff;
+      color: #0e3c7e;
+      text-decoration: none;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-back:hover {
+      background: #dce4f7;
+      transform: translateY(-1px);
+    }
+    iframe {
+      width: 100%;
+      height: calc(100vh - 70px);
+      border: none;
+    }
+    @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+        text-align: center;
+      }
+      .btn-back {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>📄 Currículum Vitae — Horacio Domínguez</h2>
+    <a href="index.html" class="btn-back">⬅️ Volver</a>
+  </header>
+
+  <iframe src="Horacio_Dominguez_admin.pdf"></iframe>
+</body>
+</html>
