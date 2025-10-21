@@ -3,6 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <script>
+  fetch('https://api.countapi.xyz/hit/hojedom.github.io/visitas')
+    .then(res => res.json())
+    .then(data => {
+      const now = new Date();
+      const fechaHora = now.toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'medium' });
+      console.log(`👀 Tu CV web tiene ${data.value} visitas. Última entrada: ${fechaHora}`);
+    })
+    .catch(() => console.log('No se pudo obtener el contador de visitas.'));
+</script>
+
   <title>Horacio Domínguez — CV</title>
   <style>
     body{font-family:"Segoe UI",Arial,sans-serif;background:#e8ebef;color:#2f3542;margin:0;padding:2rem;}
@@ -35,3 +46,4 @@
   </div>
 </body>
 </html>
+
