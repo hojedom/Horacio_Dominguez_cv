@@ -2,53 +2,130 @@
 <html lang="es">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link rel="icon" type="image/png" href="favicon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Horacio Domínguez — CV Profesional</title>
+  <meta name="description" content="Currículum Vitae de Horacio Domínguez. Perfil profesional, datos de contacto y enlace para descargar el CV en PDF.">
+  <meta name="author" content="Horacio Domínguez">
+  <meta name="robots" content="index, follow">
 
-  <script>
-  fetch('https://api.countapi.xyz/hit/hojedom.github.io/visitas')
-    .then(res => res.json())
-    .then(data => {
-      const now = new Date();
-      const fechaHora = now.toLocaleString('es-AR', { dateStyle: 'short', timeStyle: 'medium' });
-      console.log(`👀 Tu CV web tiene ${data.value} visitas. Última entrada: ${fechaHora}`);
-    })
-    .catch(() => console.log('No se pudo obtener el contador de visitas.'));
-</script>
+  <!-- Favicon -->
+<link rel="icon" type="ico/png" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.png">
 
-  <title>Horacio Domínguez — CV</title>
   <style>
-    body{font-family:"Segoe UI",Arial,sans-serif;background:#e8ebef;color:#2f3542;margin:0;padding:2rem;}
-    .container{max-width:900px;margin:0 auto;background:#fff;padding:1.6rem;border-radius:10px;box-shadow:0 6px 18px rgba(0,0,0,0.08);}
-    .header{display:flex;align-items:center;justify-content:space-between;gap:1rem}
-    h1{margin:0;font-size:1.25rem}
-    small{color:#5b6570}
-    .actions{display:flex;gap:0.6rem}
-    .btn{display:inline-block;background:#0e3c7e;color:#fff;padding:.55rem .9rem;border-radius:6px;text-decoration:none;font-weight:600}
-    .btn.secondary{background:#f3f4f6;color:#0e3c7e;border:1px solid #cfd8e3}
-    hr{border:none;border-top:1px solid #eef2f5;margin:1rem 0}
-    p{margin:0.6rem 0;color:#344152}
+    :root {
+      --color-bg: #e8ebef;
+      --color-text: #2f3542;
+      --color-card: #ffffff;
+      --color-primary: #0e3c7e;
+      --color-secondary: #f3f4f6;
+      --color-border: #cfd8e3;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: var(--color-bg);
+      color: var(--color-text);
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--color-card);
+      padding: 1.6rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 1.5rem;
+      color: var(--color-primary);
+    }
+
+    small {
+      color: #5b6570;
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.9rem;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      max-width: 100%;
+      overflow: hidden;
+      box-sizing: border-box;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--color-primary);
+      color: #fff;
+      padding: .55rem .9rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background .2s ease;
+      box-sizing: border-box;
+      word-break: break-word;
+      max-width: 100%;
+    }
+
+    .btn.secondary {
+      background: var(--color-secondary);
+      color: var(--color-primary);
+      border: 1px solid var(--color-border);
+    }
+
+    @media (max-width: 600px) {
+      body { padding: 1rem; }
+      .container { padding: 1.2rem; }
+      header { flex-direction: column; align-items: flex-start; }
+      .actions { width: 100%; flex-direction: column; align-items: stretch; }
+      .btn { width: 100%; text-align: center; }
+    }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="header">
+    <header>
       <div>
         <h1>Horacio Domínguez</h1>
-        <small>Bernal Oeste, Buenos Aires | (011) 2390-1914 | jeremiasdiminguez@gmail.com</small>
+        <small>Bernal Oeste, Buenos Aires · (011) 2390-1914 · jeremiasdiminguez@gmail.com</small>
       </div>
       <div class="actions">
-        <!-- El atributo download funciona bien si la página está en github.io -->
-        <a class="btn" href="Horacio_Dominguez_admin.pdf" download="Horacio_Dominguez_CV.pdf">📄 Descargar CV</a>
-        <a class="btn secondary" href="ver-cv.html" target="" rel="noopener">👁️ Ver CV</a>
+        <a class="btn" href="Horacio_Dominguez_admin.pdf" download="Horacio_Dominguez_CV.pdf" aria-label="Descargar CV en PDF">📄 Descargar CV</a>
+        <a class="btn secondary" href="ver-cv.html" rel="noopener" aria-label="Ver CV en línea">👁️ Ver CV</a>
       </div>
-    </div>
-    <hr>
-    
+    </header>
   </div>
+
+  <!-- Contador de visitas (solo visible en consola) -->
+<script>
+  fetch('https://script.google.com/macros/s/AKfycbw7CZTCw72wvGB48iOVDIH9PG-nNp4LYVdNqTKvDuwTrWKXBmwwGF79EBDDlKFVezH1/exec')
+    .then(res => res.json())
+    .then(data => {
+      console.log(`📊 Tu CV fue visto ${data.total} veces. Última visita registrada: ${data.fecha}`);
+    })
+    .catch(err => console.error("Error al contar visitas:", err));
+</script>
+
 </body>
 </html>
-
 
 
 
